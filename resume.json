@@ -1,0 +1,87 @@
+{
+  "basics": {
+    "name": "Ivan Rybokolnikov",
+    "label": "Senior Backend & Systems Engineer",
+    "email": "xvantz@gmail.com",
+    "location": {
+      "country": "Vietnam",
+      "remote": true
+    },
+    "summary": "Senior Backend / Systems Engineer focused on high-load distributed systems, OLTP transactions, and modular monoliths. I specialize in authoritative backends (Node.js/TypeScript) where the server is the single source of truth, state mutates constantly, and data consistency is critical. Actively utilizing Golang to offload CPU-bound bottlenecks and eliminate event loop lag. Looking for complex highload challenges in a rigorous engineering culture.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://linkedin.com/in/xvantz"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/xvantz"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Core Backend & Systems",
+      "keywords": [
+        "Node.js",
+        "TypeScript",
+        "Go",
+        "PostgreSQL",
+        "System design",
+        "Online Transaction Processing (OLTP)",
+        "Distributed Systems"
+      ]
+    },
+    {
+      "name": "Architecture & Infrastructure",
+      "keywords": [
+        "Event-Driven Architecture",
+        "NATS",
+        "ACID Compliance",
+        "State Machines",
+        "Linux (NixOS)",
+        "Docker"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Metaverse / Virtual Economy Startup",
+      "position": "Senior Software Engineer (Backend & Systems)",
+      "startDate": "2023-04",
+      "endDate": "",
+      "summary": "Played a key architectural role in scaling a platform from MVP to production. Architected the off-chain authoritative backend and completely rebuilt the client-side UI layer to deliver fault-tolerant business mechanics.",
+      "highlights": [
+        "Engineered real-time domain systems and highly concurrent, transactional virtual economy subsystems.",
+        "Optimized DB I/O by condensing session lifecycles into 8 atomic transactions, ensuring strict ACID compliance.",
+        "Built a dynamic runtime geofencing engine with a custom state manager (deferred saves and batching) to prevent DB saturation.",
+        "Architected a Golang microservice via NATS to offload CPU-bound spatial calculations from the Node.js event loop, eliminating lag during peak loads.",
+        "Designed multi-stage state machines with strict server-side transitions and a session sandboxing system (distributed RBAC, dynamic TTLs).",
+        "Established a DI-based modular UI architecture, migrating legacy pipeline to Vite + pnpm and slashing CSS bundle from 20MB to 2MB.",
+        "Engineered a custom event-wrapper for reliable bi-directional routing between web interfaces (CEF), native 3D bindings (V8), and the backend."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "KarGTY",
+      "area": "Computer Science",
+      "studyType": "Undergraduate Coursework",
+      "startDate": "2016-09",
+      "endDate": "2017-06"
+    },
+    {
+      "institution": "KITK",
+      "area": "Mechanical Engineering Technician",
+      "studyType": "Diploma",
+      "startDate": "2017-09",
+      "endDate": "2020-06"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+name: Build and Deploy Resume
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  check-and-build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Tools and Themes
+        run: npm install resumed jsonresume-theme-kendall jsonresume-theme-stackoverflow puppeteer
+
+      - name: Build outputs (HTML + PDFs)
+        run: |
+          mkdir -p dist
+          npx resumed render resume.json -t jsonresume-theme-stackoverflow -o dist/index.html
+          npx resumed export resume.json -t jsonresume-theme-kendall -o dist/resume-ats.pdf \
+            --puppeteer-arg=--no-sandbox --puppeteer-arg=--disable-setuid-sandbox
+          npx resumed export resume.json -t jsonresume-theme-stackoverflow -o dist/resume-recruiter.pdf \
+            --puppeteer-arg=--no-sandbox --puppeteer-arg=--disable-setuid-sandbox
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: resumes
+          path: dist/*
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
