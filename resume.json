@@ -4,8 +4,7 @@
     "label": "Senior Backend & Systems Engineer",
     "email": "xvantz@gmail.com",
     "location": {
-      "country": "Vietnam",
-      "remote": true
+      "countryCode": "VN"
     },
     "summary": "Senior Backend / Systems Engineer focused on high-load distributed systems, OLTP transactions, and modular monoliths. I specialize in authoritative backends (Node.js/TypeScript) where the server is the single source of truth, state mutates constantly, and data consistency is critical. Actively utilizing Golang to offload CPU-bound bottlenecks and eliminate event loop lag. Looking for complex highload challenges in a rigorous engineering culture.",
     "profiles": [
@@ -46,19 +45,18 @@
   ],
   "work": [
     {
-      "company": "Metaverse / Virtual Economy Startup",
+      "name": "Confidential Web3/Metaverse Startup",
       "position": "Senior Software Engineer (Backend & Systems)",
       "startDate": "2023-04",
       "endDate": "",
-      "summary": "Played a key architectural role in scaling a platform from MVP to production. Architected the off-chain authoritative backend and completely rebuilt the client-side UI layer to deliver fault-tolerant business mechanics.",
+      "summary": "Played a key architectural role in scaling a spatial platform from MVP to production. Architected the off-chain authoritative backend, ensuring strict state synchronization and fault-tolerant mechanics for 1,000+ peak concurrent users (CCU) per isolated instance.",
       "highlights": [
         "Engineered real-time domain systems and highly concurrent, transactional virtual economy subsystems.",
         "Optimized DB I/O by condensing session lifecycles into 8 atomic transactions, ensuring strict ACID compliance.",
-        "Built a dynamic runtime geofencing engine with a custom state manager (deferred saves and batching) to prevent DB saturation.",
-        "Architected a Golang microservice via NATS to offload CPU-bound spatial calculations from the Node.js event loop, eliminating lag during peak loads.",
-        "Designed multi-stage state machines with strict server-side transitions and a session sandboxing system (distributed RBAC, dynamic TTLs).",
-        "Established a DI-based modular UI architecture, migrating legacy pipeline to Vite + pnpm and slashing CSS bundle from 20MB to 2MB.",
-        "Engineered a custom event-wrapper for reliable bi-directional routing between web interfaces (CEF), native 3D bindings (V8), and the backend."
+        "Engineered an in-memory spatial state manager using write-behind caching and event batching, aggregating high-frequency position updates to prevent PostgreSQL transaction exhaustion.",
+        "Architected a Golang microservice via NATS to offload CPU-bound calculations from the Node.js event loop, completely eliminating lag for 1,000+ active stateful sessions.",
+        "Designed complex multi-stage state machines with strict server-side transitions and a distributed RBAC session sandboxing system.",
+        "Built a reliable bi-directional event routing gateway to handle real-time data sync between web interfaces (CEF), native 3D bindings (V8), and backend services."
       ]
     }
   ],
